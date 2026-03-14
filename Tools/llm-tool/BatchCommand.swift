@@ -33,11 +33,18 @@ struct BatchCommand: AsyncParsableCommand {
         if prompt.isEmpty {
             throw ValidationError("At least one --prompt is required.")
         }
+        if let batchSize, batchSize <= 0 {
+            throw ValidationError("--batch-size must be a positive integer (got \(batchSize)).")
+        }
     }
 
     @MainActor
     mutating func run() async throws {
         let defaultModel = MLXLLM.LLMRegistry.mistral7B4bit
+
+        if args.model == nil, !generate.quiet {
+            print("No --model specified, using default: \(defaultModel.name)")
+        }
 
         // Load model
         let modelContainer = try await memory.start { [args] in
