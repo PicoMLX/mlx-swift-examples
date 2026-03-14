@@ -216,6 +216,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"llm-tool/Arguments.swift",
+				"llm-tool/BatchCommand.swift",
 				"llm-tool/Chat.swift",
 				"llm-tool/ListCommands.swift",
 				"llm-tool/LLMTool.swift",
@@ -916,8 +917,8 @@
 				81695B3F2BA373D300F260D8 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 				C36BEFF02BC32A8C002D4AFE /* XCRemoteSwiftPackageReference "Progress" */,
 				C397D8F22CD2F60B00B87EE2 /* XCLocalSwiftPackageReference "Libraries/.." */,
+				A1B2C3D42EF4500000000001 /* XCLocalSwiftPackageReference "../mlx-swift-lm" */,
 				C32A18442D00E13E0092A5B6 /* XCRemoteSwiftPackageReference "mlx-swift" */,
-				C32AA12E2EB97625002914C6 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */,
 			);
 			productRefGroup = C39273752B606A0A00368D5D /* Products */;
 			projectDirPath = "";
@@ -3203,6 +3204,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		A1B2C3D42EF4500000000001 /* XCLocalSwiftPackageReference "../mlx-swift-lm" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../mlx-swift-lm";
+		};
 		C397D8F22CD2F60B00B87EE2 /* XCLocalSwiftPackageReference "Libraries/.." */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Libraries/..;
@@ -3288,7 +3293,7 @@
 		};
 		C314FFE32EF33D0900E5B73A /* MLXLLM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C32AA12E2EB97625002914C6 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */;
+			package = A1B2C3D42EF4500000000001 /* XCLocalSwiftPackageReference "../mlx-swift-lm" */;
 			productName = MLXLLM;
 		};
 		C3208E752DB1945D006AE6CA /* MLX */ = {
@@ -3363,12 +3368,12 @@
 		};
 		C32AA20B2EB977C4002914C6 /* MLXLLM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C32AA12E2EB97625002914C6 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */;
+			package = A1B2C3D42EF4500000000001 /* XCLocalSwiftPackageReference "../mlx-swift-lm" */;
 			productName = MLXLLM;
 		};
 		C32AA20D2EB977C4002914C6 /* MLXVLM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C32AA12E2EB97625002914C6 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */;
+			package = A1B2C3D42EF4500000000001 /* XCLocalSwiftPackageReference "../mlx-swift-lm" */;
 			productName = MLXVLM;
 		};
 		C34E49282B6A028100FCB841 /* ArgumentParser */ = {

@@ -16,7 +16,7 @@ struct LLMTool: AsyncParsableCommand {
         abstract: "Command line tool for generating text and manipulating LLMs",
         subcommands: [
             EvaluateCommand.self, ChatCommand.self, LoRACommand.self,
-            ListCommands.self,
+            ListCommands.self, BatchCommand.self,
         ],
         defaultSubcommand: EvaluateCommand.self)
 }
